@@ -1,0 +1,266 @@
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "JetBrains Mono", serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    overflow-x: hidden; /* Evita que elementos saiam da tela */
+}
+
+header {
+    background-color: white;
+    height: 5rem;
+    width: 100%; /* Garante que o header não ultrapasse a largura da tela */
+}
+
+/* Navbar */
+header #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 5rem;
+}
+
+header #navbar .nav-brand {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a4923;
+}
+
+header #navbar .nav-brand:hover {
+    color: #1a49239f;
+    transition: color 0.3s;
+}
+
+header #navbar .nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header #navbar .nav-list .nav-item a {
+    text-decoration: none;
+    color: #1a4923;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header #navbar .nav-list .nav-item a:hover {
+    color: #1a49239f;
+    transition: color 0.3s;
+}
+
+
+
+
+/* Banner */
+main {
+    margin-top: 6rem;
+}
+
+main #banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite o conteúdo quebrar para telas menores */
+}
+
+main #banner .banner-content .banner-content-title {
+    font-size: 2.813rem;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 40px;
+}
+
+main #banner .banner-content .banner-content-title .verde {
+    font-size: 2.813rem;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 40px;
+    color: #1a4923;
+}
+
+main #banner .banner-content .banner-content-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 500px;
+    margin-bottom: 2.1rem;
+}
+
+main #banner .banner-content .banner-content-btn {
+    text-decoration: none;
+    background-color: #1a4923;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 8px 24px;
+    border: none;
+}
+
+main #banner .banner-content .banner-content-btn:hover {
+    background-color: #1a4923d8;
+    transition: background-color 0.3s;
+}
+
+main #banner .banner-image {
+    border-radius: 80%;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Responsividade para Header e Banner */
+@media (max-width: 920px) {
+    header #navbar {
+        padding: 0 1rem; /* Reduz o padding para evitar estouro */
+    }
+
+    main #banner {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0 1rem; /* Reduz o padding no banner */
+        gap: 2rem;
+    }
+
+    main #banner .banner-content {
+        text-align: center;
+    }
+
+    main #banner .banner-content .banner-content-title {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    main #banner .banner-content .banner-content-subtitle {
+        max-width: 100%; /* Garante que o texto ocupe apenas o espaço disponível */
+    }
+
+    main #banner .banner-image {
+        max-width: 300px; /* Reduz a largura da imagem em telas menores */
+    }
+}
+
+/* Responsividade adicional para telas menores */
+@media (max-width: 480px) {
+    header #navbar {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+    }
+
+    header #navbar .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    main #banner .banner-content .banner-content-title {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte para telas muito pequenas */
+    }
+}
+
+
+/* Seção de Posts */
+#projetos {
+    margin-top: 4.5rem;
+    background-color: #dcf0e0;
+}
+
+#projetos .proj-content {
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projetos .proj-content .post-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+#projetos .proj-content .post-content-header .seção-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#projetos .proj-content .post-content-header .vermais {
+    text-decoration: none;
+    color: #1a4923;
+}
+
+#projetos .proj-content .posts-cards {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+#projetos .proj-content .posts-cards .post-card {
+    background-color: #f7f7f7;
+    padding: 24px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+#projetos .proj-content .posts-cards .post-card a {
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 2.2rem;
+    background-color: #1a4923;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#projetos .proj-content .posts-cards .post-card a:hover {
+    background-color: #1a4923d8;
+}
+
+
+#projetos .proj-content .posts-cards .post-card span {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    display: block;
+}
+
+/* Responsividade para Posts */
+@media(max-width: 740px) {
+    #projetos .proj-content .posts-cards {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #projetos .proj-content .post-content-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+}
